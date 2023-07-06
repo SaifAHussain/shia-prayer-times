@@ -10,6 +10,11 @@ primary_region = "lhr"
   builder = "paketobuildpacks/builder:base"
   buildpacks = ["gcr.io/paketo-buildpacks/go"]
 
+  [[build.mounts]]
+    source = "public"
+    destination = "/app/public"
+
+
 [env]
   PORT = "8080"
 
