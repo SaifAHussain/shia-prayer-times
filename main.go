@@ -111,5 +111,5 @@ func prayerTimesHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/prayer-time", prayerTimesHandler)
-	log.Fatal(http.ListenAndServe(":8000", enableCORS(http.DefaultServeMux)))
+	log.Fatal(http.ListenAndServe(":8080", enableCORS(http.DefaultServeMux)))
 }
