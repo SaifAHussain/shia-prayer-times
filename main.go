@@ -43,7 +43,7 @@ type PrayerTime struct {
 // Handler function for getting prayer times
 func prayerTimesHandler(w http.ResponseWriter, r *http.Request) {
 	// Load the JSON file containing prayer times
-	file, err := ioutil.ReadFile("./prayer_times.json")
+	file, err := ioutil.ReadFile("public/prayer_times.json")
 	if err != nil {
 		http.Error(w, "Failed to read prayer times data", http.StatusInternalServerError)
 		return
